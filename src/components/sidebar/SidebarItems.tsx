@@ -1,4 +1,3 @@
-import Compare from "../icons/Compare";
 import Image from "../icons/Image";
 import Video from "../icons/Video";
 import Connector from "../icons/Connector";
@@ -6,7 +5,7 @@ import History from "../icons/History";
 import Store from "../icons/Store";
 import AITasks from "../icons/AITasks";
 import AIJobAnalysis from "../icons/AIJobAnalysis";
-import AISOPBuilders from "../icons/AISOPBuilders";
+import Note from "../icons/Note";
 import Support from "../icons/Support";
 import NewsLetter from "../icons/NewsLetter";
 import Subscription from "../icons/Subscription";
@@ -27,7 +26,7 @@ export const engagementSidebarItems = [
 
   {
     label: "Compare",
-    icon: <Compare />,
+    icon: <Note />,
   },
 
   {
@@ -57,7 +56,7 @@ export const engagementSidebarItems = [
 
   {
     label: "AI SOP Builder",
-    icon: <AISOPBuilders />,
+    icon: <Note />,
   },
 ];
 

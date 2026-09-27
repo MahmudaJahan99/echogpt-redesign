@@ -11,7 +11,7 @@ import SettingsRow from "./SettingsRow";
 
 const SettingsModal = () => {
   return (
-    <div className="fixed h-screen w-screen top-0 left-0 right-0 bottom-0 grid place-items-center z-1000000000 bg-black/50 backdrop-blur-sm px-4">
+    <div className="hidden fixed h-screen w-screen top-0 left-0 right-0 bottom-0 grid place-items-center z-1000000000 bg-black/50 backdrop-blur-sm px-4">
       <div className="text-foreground border border-border rounded-2xl w-[95%] lg:w-112.5 flex flex-col bg-card shadow-card animate-fade-up">
         {/* Modal Header */}
         <div className="w-full flex items-center justify-between gap-5 p-5 border-b border-border">

@@ -1,4 +1,4 @@
-import Sidebar from "../components/ui/Sidebar";
+import Sidebar from "../components/sidebar/Sidebar";
 
 const MainLayout = () => {
   return (
