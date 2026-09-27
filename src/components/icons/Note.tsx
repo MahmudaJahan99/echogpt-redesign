@@ -1,4 +1,4 @@
-const AISOPBuilders = () => {
+const Note = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ const AISOPBuilders = () => {
   );
 };
 
-export default AISOPBuilders;
+export default Note;
