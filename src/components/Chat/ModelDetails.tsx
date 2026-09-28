@@ -35,7 +35,7 @@ const ModelDetails = () => {
           <button className="flex items-center justify-center w-8 h-8 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200">
             <Connector />
           </button>
-          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 left-1/2 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
+          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 -left-6  transform top-0 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
             Connectors
             <svg
               className="absolute text-foreground h-2 top-full left-1/2 transform -translate-x-1/2"
@@ -363,22 +363,6 @@ const ModelDetails = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center gap-3">
-        <div className="relative inline-block group">
-          <CirclePlus />
-          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 left-1/2 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-            New Chat
-            <TriangleDown />
-          </div>
-        </div>
-        <div className="relative inline-block group">
-          <Time />
-          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 left-1/2 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-            History
-            <TriangleDown />
           </div>
         </div>
       </div>
