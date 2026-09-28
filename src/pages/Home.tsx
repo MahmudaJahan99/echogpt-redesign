@@ -1,9 +1,12 @@
-import MainLayout from "../layout/MainLayout";
+import Abc from "../components/abc/Abc";
 
 const Home = () => {
-  return <div>
-    <MainLayout />
-  </div>;
+  return (
+    <div>
+      {/* <Abc /> */}
+      router based content
+    </div>
+  );
 };
 
 export default Home;
