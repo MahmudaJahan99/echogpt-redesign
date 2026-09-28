@@ -47,6 +47,7 @@ progress {
 }
 
 [type=search] {
+    appearance: textfield;
     -webkit-appearance: textfield;
     outline-offset: -2px
 }
@@ -85,17 +86,6 @@ button {
     cursor: default
 }
 
-audio,
-canvas,
-embed,
-iframe,
-img,
-object,
-svg,
-video {
-    display: block;
-    vertical-align: middle
-}
 
 img,
 video {
@@ -139,41 +129,6 @@ video {
     .container {
         max-width: 1536px
     }
-}
-
-.-inset-1 {
-    inset: -.25rem
-}
-
-.inset-0 {
-    inset: 0
-}
-
-.inset-y-0 {
-    top: 0;
-    bottom: 0
-}
-
-.line-clamp-1 {
-    -webkit-line-clamp: 1
-}
-
-.line-clamp-1,
-.line-clamp-2 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical
-}
-
-.line-clamp-2 {
-    -webkit-line-clamp: 2
-}
-
-.line-clamp-3 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3
 }
 
 .aspect-video {
@@ -2299,6 +2254,7 @@ th {
 
 .Toastify__toast-container {
     z-index: var(--toastify-z-index);
+    transform: translateZ(var(--toastify-z-index));
     -webkit-transform: translateZ(var(--toastify-z-index));
     position: fixed;
     padding: 4px;

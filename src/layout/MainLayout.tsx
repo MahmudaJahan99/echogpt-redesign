@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div className="flex">
       <Sidebar />
 
-      <div className="main flex-1">
+      <div className="flex-1 flex flex-col overflow-hidden">
         <TopNav />
 
         <main className="content">
