@@ -146,7 +146,7 @@ const SettingsRow = ({
           <span>{selectedOption}</span>
 
           <DropdownArrow
-            className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+            // className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
             aria-hidden="true"
           />
         </button>
