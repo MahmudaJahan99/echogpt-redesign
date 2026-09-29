@@ -4,30 +4,55 @@ import Sparkles from "../icons/Sparkles";
 import CloseCircle from "../icons/CloseCircle";
 import CheckMark from "../icons/CheckMark";
 
-const ModelDetails = () => {
+import type { Model } from "./models";
+
+interface ModelDetailsProps {
+  selectedModel?: Model;
+  isModalOpen?: boolean;
+  onToggleModal?: () => void;
+}
+
+const ModelDetails = ({
+  selectedModel,
+  isModalOpen = false,
+  onToggleModal,
+}: ModelDetailsProps) => {
+  const modelName = selectedModel?.name || "EchoGPT";
+  const modelImage = selectedModel?.imageSrc || "/logo.svg";
+
   return (
     <div className="w-full flex items-center gap-5 justify-between">
       <div className="relative flex items-center gap-2.5">
-        <div className="flex items-center gap-2 cursor-pointer rounded-full pl-1 pr-3 py-1 hover:bg-muted transition-all duration-200">
+        {/* Model Selection Button */}
+        <button
+          id="model-selection-button"
+          type="button"
+          onClick={onToggleModal}
+          aria-expanded={isModalOpen}
+          aria-haspopup="dialog"
+          aria-label={`Select model, currently ${modelName}`}
+          className="flex items-center gap-2 cursor-pointer rounded-full pl-1 pr-3 py-1 hover:bg-muted transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-left select-none"
+        >
           <img
             width={32}
             height={32}
-            className="rounded-full ring-1 ring-border"
-            src="/logo.svg"
+            className="rounded-full ring-1 ring-border object-cover shrink-0"
+            src={modelImage}
             style={{ color: "transparent" }}
-            alt="EchoGPT"
+            alt={modelName}
             loading="lazy"
             aria-hidden="true"
           />
           <div className="h-full flex items-center justify-center text-sm font-medium text-foreground">
-            EchoGPT
+            {modelName}
           </div>
 
-          <DropdownArrow />
-        </div>
+          <DropdownArrow className={isModalOpen ? "rotate-180" : "rotate-0"} />
+        </button>
 
         <div className="w-px h-5 bg-border"></div>
 
+        {/* Connectors */}
         <div className="relative inline-block group">
           <button className="flex items-center justify-center w-8 h-8 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200">
             <Connector />
@@ -48,18 +73,21 @@ const ModelDetails = () => {
 
         <div className="w-px h-5 bg-border"></div>
 
-        <img
-          alt="up i"
-          loading="lazy"
-          width="20"
-          height="20"
-          decoding="async"
-          data-nimg="1"
-          className="cursor-pointer"
-          src="upgrade.svg"
-          style={{ color: "transparent" }}
-        />
-        
+        {/* Upgrade button */}
+        <button>
+          <img
+                  alt="up i"
+                  loading="lazy"
+                  width="20"
+                  height="20"
+                  decoding="async"
+                  data-nimg="1"
+                  className="cursor-pointer"
+                  src="upgrade.svg"
+                  style={{ color: "transparent" }}
+                />
+        </button>
+
         <div className="hidden w-full sm:w-112.5 absolute bottom-10 left-0 grid place-items-center z-9999999999999 rounded-2xl animate-fade-up">
           <div className="w-full h-full bg-card text-foreground border border-border shadow-card overflow-y-auto custom-scrollbar rounded-2xl">
             <div className="w-full h-full bg-surface p-5 rounded-2xl">

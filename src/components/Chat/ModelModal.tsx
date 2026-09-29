@@ -1,3 +1,4 @@
+import type React from "react";
 import modelSparkle from "../../assets/images/model-sparkle.svg";
 import redRocket from "../../assets/images/red-rocket.svg";
 import ModelCards from "./ModelCards";
@@ -6,11 +7,20 @@ import type { Model } from "./models";
 interface ModelModalProps {
   selectedModel?: Model;
   onSelectModel?: (model: Model) => void;
+  modalRef?: React.RefObject<HTMLDivElement | null>;
 }
 
-const ModelModal = ({ selectedModel, onSelectModel }: ModelModalProps) => {
+const ModelModal = ({
+  selectedModel,
+  onSelectModel,
+  modalRef,
+}: ModelModalProps) => {
   return (
-    <div className="absolute left-0 bottom-41.25 grid place-items-center z-1000000000 w-81.75">
+    <div
+      ref={modalRef}
+      id="model-modal"
+      className="absolute left-0 bottom-41.25 grid place-items-center z-1000000000 w-81.75"
+    >
       <div className="text-foreground border border-border rounded-2xl py-4 w-full flex flex-col bg-card shadow-card animate-fade-up">
         {/* Heading */}
         <div className="w-full flex items-center gap-5 justify-between px-4">
@@ -44,7 +54,7 @@ const ModelModal = ({ selectedModel, onSelectModel }: ModelModalProps) => {
             <div className="text-xs font-medium mb-2.5 text-muted-foreground">
               Default Model
             </div>
-            <div className="w-full h-px] bg-border"></div>
+            <div className="w-full h-px bg-border"></div>
           </div>
 
           <ModelCards
@@ -57,7 +67,7 @@ const ModelModal = ({ selectedModel, onSelectModel }: ModelModalProps) => {
             <div className="text-xs font-medium mb-2.5 text-muted-foreground">
               Advanced Models
             </div>
-            <div className="w-full h-px] bg-border"></div>
+            <div className="w-full h-px bg-border"></div>
           </div>
 
           <ModelCards

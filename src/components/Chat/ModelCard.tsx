@@ -67,7 +67,9 @@ const ModelCard = ({
                 aria-label={`Capabilities: ${capabilities.join(", ")}`}
                 className="inline-flex items-center gap-1 text-muted-foreground"
               >
-                {capabilities.slice(0, 2).map((cap) => renderCapabilityIcon(cap))}
+                {capabilities
+                  .slice(0, 2)
+                  .map((cap) => renderCapabilityIcon(cap))}
                 {capabilities.length > 2 && (
                   <span className="text-[10px] leading-none">
                     +{capabilities.length - 2}

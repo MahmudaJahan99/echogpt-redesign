@@ -1,7 +1,11 @@
-const DropdownArrow = () => {
+interface DropdownArrowProps {
+  className?: string;
+}
+
+const DropdownArrow = ({ className = "" }: DropdownArrowProps) => {
   return (
     <svg
-      className="rotate-0 transition-all"
+      className={`transition-transform duration-200 ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       width="14"
       height="14"
