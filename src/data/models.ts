@@ -837,3 +837,4 @@ export const models: Model[] = [
 
 export const defaultModels = models.filter((m) => m.category === "default");
 export const advancedModels = models.filter((m) => m.category === "advanced");
+export const proModels = models.filter((m) => m.badge === "Pro");
