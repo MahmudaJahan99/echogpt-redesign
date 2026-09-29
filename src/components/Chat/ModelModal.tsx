@@ -50,26 +50,26 @@ const ModelModal = ({
 
         {/* Model Selection Options */}
         <div className="w-full max-h-[40vh] sm:max-h-[50vh] flex flex-col gap-2 mt-4 overflow-y-auto custom-scrollbar px-4">
+          {/* Default Models */}
           <div>
             <div className="text-xs font-medium mb-2.5 text-muted-foreground">
               Default Model
             </div>
             <div className="w-full h-px bg-border"></div>
           </div>
-
           <ModelCards
             category="default"
             selectedModelName={selectedModel?.name}
             onSelectModel={onSelectModel}
           />
 
+          {/* Advanced Models */}
           <div className="mt-2.5">
             <div className="text-xs font-medium mb-2.5 text-muted-foreground">
               Advanced Models
             </div>
             <div className="w-full h-px bg-border"></div>
           </div>
-
           <ModelCards
             category="advanced"
             selectedModelName={selectedModel?.name}

@@ -48,6 +48,7 @@ const ModelCard = ({
       }`}
     >
       <div className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
+        {/* Model Image */}
         <img
           alt={name}
           loading="lazy"
@@ -58,10 +59,13 @@ const ModelCard = ({
           src={imageSrc}
           style={{ color: "transparent" }}
         />
+        {/* Model Name */}
         <span className="min-w-0 truncate">{name}</span>
 
+        {/* Capabilities and Badge */}
         {(hasCapabilities || hasBadge) && (
           <span className="ml-auto flex items-center gap-2 shrink-0">
+            {/* Capabilities */}
             {hasCapabilities && (
               <span
                 aria-label={`Capabilities: ${capabilities.join(", ")}`}
@@ -77,6 +81,7 @@ const ModelCard = ({
                 )}
               </span>
             )}
+            {/* Badge */}
             {hasBadge && (
               <span
                 className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
@@ -92,6 +97,7 @@ const ModelCard = ({
         )}
       </div>
 
+    {/* Model Description */}
       <div className="text-[11px] font-medium mt-2 text-muted-foreground leading-relaxed">
         {description}
       </div>
