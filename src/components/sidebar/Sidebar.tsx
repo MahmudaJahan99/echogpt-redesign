@@ -1,17 +1,14 @@
 import NewChatIcon from "../icons/NewChatIcon";
-import Settings from "../icons/Settings";
-import Share from "../icons/Share";
-import LightMode from "../icons/LightMode";
-import Website from "../icons/Website";
+
 import Button from "../ui/Button";
 import Logo from "../ui/Logo";
-import Tooltip from "../ui/Tooltip";
 import SidebarItem from "./SidebarItem";
 import { engagementSidebarItems, supportSidebarItems } from "./SidebarItems";
 import SettingsModal from "../settingsModal/SettingsModal";
 import ShareModal from "../shareModal/ShareModal";
 import { useRef, useState } from "react";
 import Border from "../ui/Border";
+import SidebarBottom from "./SidebarBottom";
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState("History");
@@ -116,72 +113,14 @@ const Sidebar = () => {
         {isShareOpen && <ShareModal onClose={closeShare} />}
 
         {/* **********BOTTOM OPTIONS********** */}
-        <div className="absolute left-0 bottom-0 w-full h-12 border-t border-border px-5 flex items-center justify-around bg-surface dark:bg-surface">
-          <Tooltip
-            children={
-              <a
-                target="_blank"
-                href="https://appifydevs.com"
-                aria-label="Visit AppifyDevs website"
-                rel="noopener noreferrer"
-              >
-                <Website aria-hidden="true" />
-              </a>
-            }
-            text="Website"
-            leftOffset="-left-7"
-          />
-
-          <Tooltip
-            children={
-              <button
-                ref={shareButtonRef}
-                type="button"
-                aria-label="Open share option"
-                aria-haspopup="dialog"
-                aria-expanded={isShareOpen}
-                onClick={openShare}
-                className="flex items-center justify-center rounded-xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-              >
-                <Share aria-hidden="true" />
-              </button>
-            }
-            text="Share"
-            leftOffset="-left-5"
-          />
-
-          <Tooltip
-            children={
-              <button
-                ref={settingsButtonRef}
-                type="button"
-                aria-label="Open settings"
-                aria-haspopup="dialog"
-                aria-expanded={isSettingsOpen}
-                onClick={openSettings}
-                className="flex items-center justify-center rounded-xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-              >
-                <Settings aria-hidden="true" />
-              </button>
-            }
-            text="Settings"
-            leftOffset="-left-7"
-          />
-
-          <Tooltip
-            children={
-              <button
-                type="button"
-                aria-label="Toggle light mode"
-                className="flex items-center justify-center rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-              >
-                <LightMode aria-hidden="true" />
-              </button>
-            }
-            text="Light Mode"
-            leftOffset="-left-9"
-          />
-        </div>
+        <SidebarBottom
+          openSettings={openSettings}
+          openShare={openShare}
+          isSettingsOpen={isSettingsOpen}
+          isShareOpen={isShareOpen}
+          settingsButtonRef={settingsButtonRef}
+          shareButtonRef={shareButtonRef}
+        />
       </div>
     </aside>
   );
