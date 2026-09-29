@@ -3,9 +3,6 @@ import Connector from "../icons/Connector";
 import Sparkles from "../icons/Sparkles";
 import CloseCircle from "../icons/CloseCircle";
 import CheckMark from "../icons/CheckMark";
-import CirclePlus from "../icons/CirclePlus";
-import TriangleDown from "../icons/TriangleDown";
-import Time from "../icons/Time";
 
 const ModelDetails = () => {
   return (
@@ -62,6 +59,7 @@ const ModelDetails = () => {
           src="upgrade.svg"
           style={{ color: "transparent" }}
         />
+        
         <div className="hidden w-full sm:w-112.5 absolute bottom-10 left-0 grid place-items-center z-9999999999999 rounded-2xl animate-fade-up">
           <div className="w-full h-full bg-card text-foreground border border-border shadow-card overflow-y-auto custom-scrollbar rounded-2xl">
             <div className="w-full h-full bg-surface p-5 rounded-2xl">
