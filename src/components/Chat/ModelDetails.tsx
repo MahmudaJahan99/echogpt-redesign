@@ -3,7 +3,6 @@ import Connector from "../icons/Connector";
 import Sparkles from "../icons/Sparkles";
 import CloseCircle from "../icons/CloseCircle";
 import CheckMark from "../icons/CheckMark";
-
 import type { Model } from "./models";
 import Tooltip from "../ui/Tooltip";
 
@@ -34,6 +33,7 @@ const ModelDetails = ({
           aria-label={`Select model, currently ${modelName}`}
           className="flex items-center gap-2 cursor-pointer rounded-full pl-1 pr-3 py-1 hover:bg-muted transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-left select-none"
         >
+          {/* Current model image */}
           <img
             width={32}
             height={32}
@@ -44,6 +44,8 @@ const ModelDetails = ({
             loading="lazy"
             aria-hidden="true"
           />
+
+          {/* Current model name */}
           <div className="h-full flex items-center justify-center text-sm font-medium text-foreground">
             {modelName}
           </div>

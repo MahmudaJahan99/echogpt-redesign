@@ -59,6 +59,7 @@ const ModelCard = ({
           src={imageSrc}
           style={{ color: "transparent" }}
         />
+
         {/* Model Name */}
         <span className="min-w-0 truncate">{name}</span>
 
@@ -97,7 +98,7 @@ const ModelCard = ({
         )}
       </div>
 
-    {/* Model Description */}
+      {/* Model Description */}
       <div className="text-[11px] font-medium mt-2 text-muted-foreground leading-relaxed">
         {description}
       </div>
