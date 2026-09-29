@@ -23,7 +23,7 @@ const SidebarBottom = ({
   shareButtonRef,
 }: SidebarBottomProps) => {
   return (
-    <div className="shrink-0 absolute left-0 bottom-0 w-full h-12 border-t border-border px-5 flex items-center justify-around bg-surface dark:bg-surface">
+    <div className="shrink-0 sticky left-0 bottom-0 w-full h-12 border-t border-border px-5 flex items-center justify-around bg-surface dark:bg-surface">
       <Tooltip
         children={
           <a

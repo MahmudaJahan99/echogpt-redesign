@@ -48,14 +48,14 @@ const Sidebar = () => {
       aria-label="Sidebar"
       className="w-[288px] transition-all duration-300 hidden md:flex"
     >
-      <div className="w-full h-full flex flex-col justify-between bg-surface dark:bg-surface border-r border-border relative">
+      <div className="relative w-full h-full flex flex-col justify-between bg-surface dark:bg-surface border-r border-border">
         {/* **********LOGO********** */}
         <Logo />
 
         {/* **********SIDEBAR MENU********** */}
         <nav
           aria-label="Main navigation"
-          className="w-full h-[calc(100%-88px)] overflow-x-auto pt-2 pb-14 custom-scrollbar"
+          className="w-full min-h-0 overflow-x-auto overflow-y-auto pt-2 pb-14 custom-scrollbar"
         >
           {/* New Chat Button */}
           <Button text="New Chat" icon={<NewChatIcon aria-hidden="true" />} />
@@ -108,8 +108,8 @@ const Sidebar = () => {
           </section>
         </nav>
 
+        {/* **********MODALS********** */}
         {isSettingsOpen && <SettingsModal onClose={closeSettings} />}
-
         {isShareOpen && <ShareModal onClose={closeShare} />}
 
         {/* **********BOTTOM OPTIONS********** */}
