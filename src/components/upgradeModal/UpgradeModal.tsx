@@ -4,6 +4,7 @@ import PlanOptions from "./PlanOptions";
 import ProModels from "./ProModels";
 import plans, { type PlanName } from "../../data/plans";
 import PaymentModal from "../paymentModal/PaymentModal";
+import CloseCircle from "../icons/CloseCircle";
 
 interface UpgradeModalProps {
   onClose: () => void;
@@ -12,8 +13,8 @@ interface UpgradeModalProps {
 const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
   const [selectedPlan, setSelectedPlan] = useState<PlanName>("Monthly");
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<"international" | "bdt">(
-    "international",
+  const [paymentMethod, setPaymentMethod] = useState<"usd" | "bdt">(
+    "usd",
   );
 
   const currentPlan = plans[selectedPlan];
@@ -36,6 +37,14 @@ const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
       <div className="w-full  h-[80vh]  max-h-[80vh] bg-card text-foreground border border-border shadow-card overflow-hidden custom-scrollbarl">
         {/* modal content */}
         <div className="flex flex-col h-full bg-surface p-5 rounded-2xl">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close upgrade modal"
+            className="absolute top-4 right-4 rounded-lg p-2 hover:bg-muted transition-colors"
+          >
+            <CloseCircle />
+          </button>
           {/* Modal Header Image */}
           <div className="w-full h-30 shrink-0 flex items-center justify-center">
             <img
