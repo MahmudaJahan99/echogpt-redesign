@@ -67,7 +67,7 @@ const ChatMain = () => {
         />
       )}
 
-<ChatInput />
+      <ChatInput />
     </div>
   );
 };

@@ -129,6 +129,7 @@ const Sidebar = () => {
               </a>
             }
             text="Website"
+            leftOffset="-left-7"
           />
 
           <Tooltip
@@ -146,6 +147,7 @@ const Sidebar = () => {
               </button>
             }
             text="Share"
+            leftOffset="-left-5"
           />
 
           <Tooltip
@@ -163,6 +165,7 @@ const Sidebar = () => {
               </button>
             }
             text="Settings"
+            leftOffset="-left-7"
           />
 
           <Tooltip
@@ -176,6 +179,7 @@ const Sidebar = () => {
               </button>
             }
             text="Light Mode"
+            leftOffset="-left-9"
           />
         </div>
       </div>

@@ -5,6 +5,7 @@ import CloseCircle from "../icons/CloseCircle";
 import CheckMark from "../icons/CheckMark";
 
 import type { Model } from "./models";
+import Tooltip from "../ui/Tooltip";
 
 interface ModelDetailsProps {
   selectedModel?: Model;
@@ -54,28 +55,33 @@ const ModelDetails = ({
 
         {/* Connectors */}
         <div className="relative inline-block group">
-          <button className="flex items-center justify-center w-8 h-8 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200">
-            <Connector />
-          </button>
-          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 -left-6  transform top-0 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-            Connectors
-            <svg
-              className="absolute text-foreground h-2 top-full left-1/2 transform -translate-x-1/2"
-              viewBox="0 0 255 255"
-            >
-              <polygon
-                className="fill-current"
-                points="0,0 127.5,127.5 255,0"
-              ></polygon>
-            </svg>
-          </div>
+          <Tooltip
+            children={
+              <button
+                type="button"
+                aria-label="Connectors"
+                className="flex items-center justify-center w-8 h-8 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200"
+              >
+                <Connector />
+              </button>
+            }
+            text="Connectors"
+            leftOffset="-left-8.75"
+          />
         </div>
 
         <div className="w-px h-5 bg-border"></div>
 
         {/* Upgrade button */}
-        <button>
-          <img
+        <div className="relative inline-block group">
+          <Tooltip
+            children={
+              <button
+                type="button"
+                aria-label="Upgrade"
+                className="flex items-center justify-center w-8 h-8 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200"
+              >
+                <img
                   alt="up i"
                   loading="lazy"
                   width="20"
@@ -86,7 +92,12 @@ const ModelDetails = ({
                   src="upgrade.svg"
                   style={{ color: "transparent" }}
                 />
-        </button>
+              </button>
+            }
+            text="Upgrade"
+            leftOffset="-left-8.75"
+          />
+        </div>
 
         <div className="hidden w-full sm:w-112.5 absolute bottom-10 left-0 grid place-items-center z-9999999999999 rounded-2xl animate-fade-up">
           <div className="w-full h-full bg-card text-foreground border border-border shadow-card overflow-y-auto custom-scrollbar rounded-2xl">

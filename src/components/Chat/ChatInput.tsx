@@ -1,6 +1,7 @@
 import Hyperlink from "../icons/Hyperlink";
 import Mic from "../icons/Mic";
 import Send from "../icons/Send";
+import Tooltip from "../ui/Tooltip";
 
 const ChatInput = () => {
   return (
@@ -22,50 +23,36 @@ const ChatInput = () => {
 
       <div className="w-22.5 h-15 flex items-center justify-end gap-2 mr-3">
         <div className="relative inline-block group">
-          {/* Mic Icon */}
-          <div className="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center text-muted-foreground hover:bg-muted hover:text-primary active:scale-[0.95] transition-all duration-200">
-            <Mic />
-          </div>
-
           {/* Mic Tooltip */}
-          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 -left-8.75 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-            Speech to Text
-            <svg
-              className="absolute text-foreground h-2 top-full left-1/2 transform -translate-x-1/2"
-              x="0px"
-              y="0px"
-              viewBox="0 0 255 255"
-            >
-              <polygon
-                className="fill-current"
-                points="0,0 127.5,127.5 255,0"
-              ></polygon>
-            </svg>
-          </div>
+          <Tooltip
+            children={
+              <button
+                type="button"
+                aria-label="Speech to Text"
+                className="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center text-muted-foreground hover:bg-muted hover:text-primary active:scale-[0.95] transition-all duration-200"
+              >
+                <Mic />
+              </button>
+            }
+            text="Speech to Text"
+            leftOffset="-left-8.75"
+          />
         </div>
 
         <div className="relative inline-block group">
-          {/* Send icon */}
-          <div className="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center bg-primary text-white shadow-glow hover:bg-primary-600 active:scale-[0.95] transition-all duration-200">
-            <Send />
-          </div>
-
-          {/* Send Tooltip */}
-          <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 -left-3 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-            Send
-            <svg
-              className="absolute text-foreground h-2 top-full left-1/2 transform -translate-x-1/2"
-              x="0px"
-              y="0px"
-              viewBox="0 0 255 255"
-              // xml:space="preserve"
-            >
-              <polygon
-                className="fill-current"
-                points="0,0 127.5,127.5 255,0"
-              ></polygon>
-            </svg>
-          </div>
+          <Tooltip
+            children={
+              <button
+                type="button"
+                aria-label="Send message"
+                className="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center bg-primary text-white shadow-glow hover:bg-primary-600 active:scale-[0.95] transition-all duration-200"
+              >
+                <Send />
+              </button>
+            }
+            text="Speech to Text"
+            leftOffset="-left-8.75"
+          />
         </div>
       </div>
     </div>

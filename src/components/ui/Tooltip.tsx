@@ -3,14 +3,17 @@ import type { ReactNode } from "react";
 type TooltipProps = {
   text: string;
   children: ReactNode;
+  leftOffset?: string; // Optional prop to adjust the left offset of the tooltip
 };
 
-const Tooltip = ({ text, children }: TooltipProps) => {
+const Tooltip = ({ text, children, leftOffset }: TooltipProps) => {
   return (
     <div className="relative inline-block group">
       {children}
 
-      <div className="absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 -left-6 -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
+      <div
+        className={`absolute z-1000000000 bg-foreground text-background text-xs rounded-lg shadow-card px-2.5 py-1.5 whitespace-nowrap -mt-8 transform top-0 ${leftOffset || "-left-6"} -translate-x-1/2 opacity-0 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100`}
+      >
         {text}
 
         <svg
