@@ -5,7 +5,7 @@ const TopNav = () => {
   return (
     <nav
       aria-label="Main navigation"
-      className="h-18 flex items-center justify-between gap-5 glass border-b border-border sticky top-0 z-30"
+      className="h-18 shrink-0 flex items-center justify-between gap-5 glass border-b border-border z-30"
     >
       <button
         type="button"
