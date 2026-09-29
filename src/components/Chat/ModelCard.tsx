@@ -1,4 +1,4 @@
-import type { Capability } from "./models";
+import type { Capability } from "../../data/models";
 import Reasoning from "../icons/Reasoning";
 import TextInput from "../icons/TextInput";
 import Vision from "../icons/Vision";

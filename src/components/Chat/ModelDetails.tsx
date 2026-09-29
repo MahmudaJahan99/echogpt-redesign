@@ -3,7 +3,7 @@ import Connector from "../icons/Connector";
 import Sparkles from "../icons/Sparkles";
 import CloseCircle from "../icons/CloseCircle";
 import CheckMark from "../icons/CheckMark";
-import type { Model } from "./models";
+import type { Model } from "../../data/models";
 import Tooltip from "../ui/Tooltip";
 
 interface ModelDetailsProps {

@@ -2,7 +2,7 @@ import ColorTheme from "../icons/ColorTheme";
 import ModelIcon from "../icons/ModelIcon";
 import Privacy from "../icons/Privacy";
 import Terms from "../icons/Terms";
-import { AIModelsNames } from "../sidebar/AIModelsNames";
+import { aiModelsNames } from "../../data/aiModelsNames";
 import Border from "../ui/Border";
 import Modal from "../ui/Modal";
 import ModalSectionHeader from "./ModalSectionHeader";
@@ -30,7 +30,7 @@ const SettingsModal = ({ onClose }: SettingsModalProps) => {
         icon={<ModelIcon aria-hidden="true" />}
         title="Default Model"
         defaultOption="EchoGPT"
-        dropdownItems={AIModelsNames}
+        dropdownItems={aiModelsNames}
       />
 
       <Border />

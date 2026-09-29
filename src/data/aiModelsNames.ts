@@ -1,4 +1,4 @@
-export const AIModelsNames = [
+export const aiModelsNames = [
   "EchoGPT",
   "DeepSeek V4 Pro",
   "Nemotron 3 Ultra",

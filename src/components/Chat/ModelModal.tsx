@@ -2,7 +2,7 @@ import type React from "react";
 import modelSparkle from "../../assets/images/model-sparkle.svg";
 import redRocket from "../../assets/images/red-rocket.svg";
 import ModelCards from "./ModelCards";
-import type { Model } from "./models";
+import type { Model } from "../../data/models";
 
 interface ModelModalProps {
   selectedModel?: Model;

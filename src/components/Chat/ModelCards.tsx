@@ -1,5 +1,5 @@
 import ModelCard from "./ModelCard";
-import { models, defaultModels, advancedModels, type Model } from "./models";
+import { models, defaultModels, advancedModels, type Model } from "../../data/models";
 
 interface ModelCardsProps {
   category?: "default" | "advanced";

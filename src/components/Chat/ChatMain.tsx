@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import ModelDetails from "./ModelDetails";
 import ModelModal from "./ModelModal";
-import { models, type Model } from "./models";
+import { models, type Model } from "../../data/models";
 import ChatInput from "./ChatInput";
 
 const ChatMain = () => {

@@ -3,7 +3,7 @@ import Hyperlink from "../icons/Hyperlink";
 import Border from "../ui/Border";
 import Modal from "../ui/Modal";
 import ShareLink from "./ShareLink";
-import { getShareUrl } from "./shareOptions";
+import { getShareUrl } from "../../data/shareOptions";
 
 type ShareModalProps = { onClose: () => void };
 
