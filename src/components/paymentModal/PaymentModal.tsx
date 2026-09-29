@@ -17,7 +17,7 @@ const PaymentModal = ({
   onSubmit,
 }: PaymentModalProps) => {
   return (
-    <div className=" fixed h-screen w-screen top-0 left-0 right-0 bottom-0 grid place-items-center z-1000000000 bg-black/50 backdrop-blur-sm p-4">
+    <div className=" fixed h-screen w-[calc(100vw-290px)] top-0 -left-64 right-0 bottom-0 grid place-items-center z-1000000000 bg-black/50 backdrop-blur-sm p-4">
       <div className="bg-card text-foreground border border-border fixed shadow-card rounded-2xl h-auto max-h-[99%] overflow-x-auto overflow-y-auto min-w-[97%] sm:min-w-[90%] md:min-w-[80%] lg:min-w-[50vw] xl:min-w-[30vw] animate-fade-up">
         {/* Header */}
         <div
